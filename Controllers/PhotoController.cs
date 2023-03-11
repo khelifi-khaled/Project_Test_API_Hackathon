@@ -2,15 +2,8 @@
 using Azure.AI.Vision.Core.Input;
 using Azure.AI.Vision.Core.Options;
 using Azure.AI.Vision.ImageAnalysis;
-using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
 using Project_Test_API_Hackathon.Entities;
-using System;
-using System.Net.Http.Headers;
-using System.Net.NetworkInformation;
-using System.Reflection;
-using System.Text.Json;
 
 namespace Project_Test_API_Hackathon.Controllers
 {
@@ -67,7 +60,6 @@ namespace Project_Test_API_Hackathon.Controllers
                 endPoint,
                 "6802e6ab7e744944b198bbc2c8f20215");
 
-                string route = "cognitive-services/computer-vision/media/quickstarts";
                 //var imageSource = VisionSource.FromUrl($"{endPoint}/{route}/Images/{modelPhoto.PhotoName}"));
                 
                 string wwwroot = _env.WebRootPath;
@@ -152,9 +144,6 @@ namespace Project_Test_API_Hackathon.Controllers
             {
                 return BadRequest();
             }
-
-            return Ok();
-
 
         }
 
