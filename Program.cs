@@ -9,8 +9,13 @@ IConfiguration config = builder.Configuration;
 
 builder.Services.AddHttpClient("Default", (client) =>
 {
+    //client.DefaultRequestHeaders.Add("Authorization", "6802e6ab7e744944b198bbc2c8f20215");
     client.BaseAddress = new Uri(config[key: "ApiUri"]);
 });
+
+
+
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
