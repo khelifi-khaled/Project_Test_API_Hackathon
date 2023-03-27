@@ -4,7 +4,6 @@ using Azure.AI.Vision.Core.Options;
 using Azure.AI.Vision.ImageAnalysis;
 using Microsoft.AspNetCore.Mvc;
 using Project_Test_API_Hackathon.Entities;
-using System.Linq.Expressions;
 
 namespace Project_Test_API_Hackathon.Controllers
 {
@@ -389,6 +388,7 @@ namespace Project_Test_API_Hackathon.Controllers
                 }
 
                 var path = Path.Combine(_env.WebRootPath, "Images/", modelPhoto.PhotoFile.FileName);
+
                 //var path = Path.GetFullPath("C:\\home\\site\\wwwroot\\wwwroot\\Images\\test.jpg");
 
                 using (FileStream stream = new(path, FileMode.Create))
